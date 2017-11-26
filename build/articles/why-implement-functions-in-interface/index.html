@@ -1,0 +1,106 @@
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #333;
+    opacity: 0.99;
+  }
+  img#profile {
+    border-radius: 15px;
+    position: relative;
+    top: 5px;
+  }
+  nav {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  nav a {
+    background-color: transparent;
+    line-height: 41px;
+    height: 38px;
+    color: #aaa;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  nav a:visited {
+    color: inherit;
+  }
+  nav a:hover {
+    color: #eee;
+  }
+  .left-spacer {
+    margin-left: 1em;
+  }
+  .right-spacer {
+    margin-right: 1em;
+  }
+</style>
+<script>
+  // $("nav a").o
+
+</script>
+<nav class="">
+  <a class="left right-spacer" href="#"><img id="profile" src="file:///G:/lab/blog/build//lib/img/profile.jpg" height="30px" width="30px"></a>
+  <a class="left right-spacer" href="file:///G:/lab/blog/build//index.html">Home</a>
+  <a class="left right-spacer" href="file:///G:/lab/blog/build//articles/index.html">Articles</a>
+  <a class="right left-spacer" href="file:///G:/lab/blog/build//articles/">Hire Me</a>
+  <a class="right left-spacer" href="file:///G:/lab/blog/build//articles/">Disagree</a>
+</nav> <head>
+  <!-- <base href="file:///G:/lab/blog/build/"> -->
+  <link rel="stylesheet" type="text/css" href="file:///G:/lab/blog/build//lib/css/tmr.css">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu+Mono" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="file:///G:/lab/blog/build//lib/css/bootstrap.min.css"> -->
+  <style>
+    * {
+      /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+      margin: 0;
+      padding: 0;
+      /* font-family: 'Ubuntu', sans-serif; */
+      /* font-family: 'Ubuntu Condensed', sans-serif; */
+    }
+    code {
+      font-family: 'Ubuntu Mono', monospace;
+    }
+    body {
+      padding-top: 50px;
+      background-color: #1d1f21;
+    }
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;    
+    }
+    a:visited {
+      color: #b294bb;
+    }
+    a:hover {
+      color: #81a2be;
+    }
+  </style>
+</head>
+
+<style>
+  article {
+    font-size: larger;
+    padding: 3em;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  article > p {
+    margin-top: 1em; 
+    margin-bottom: 1em; 
+  }
+  /* article > p:last-of-type {
+    margin-bottom: 0em; 
+  } */
+</style>
+
+<article>
+  <h1 id="why-in-oop-you-should-stop-implementing-functions-in-classes">Why in OOP You Should Stop Implementing Functions In Classes</h1> <p>When I was in my first year undergrad OOP class, we were told that OOP is a brilliant way to model everything in life, that everything is an object, and we should write methods associative to the object in its class. I went on becoming a teaching assistant and the university and told my students the same thing. It is not until a few years later I realize I was lied to, and so were my students. Classes are not a decent way to model things for many reasons. It is wasteful in resources when child classes have to a chain of parent properties that are not always necessary. Its style of polymorphism creates complications such as the diamond problem, unsafe up and down casting, when not bringing any special benefits to the table. (Remember, there are many other languages that are living happily using other methods of polymorphism.) It gives too much freedom to code maintainers, and leads them to extending a class in unintended way and breaking the code... many experienced programmers, like you, know the frustration.</p> <p>This suffering ends the moment we stop writing functions in classes, and I'm not suggesting we should all go back to stone age and write in C, but instead, most methods you wrote in classes should actually be in interfaces. Higher readability and reusability can be achieve this way. Before my explanation of this, let me first clarify what I mean by OOP in this article. By OOP I mean C++ or Java-like languages, where you have features such as class, interface, modules or equivalence. We should stop advertising OOP as a modeling tool. It is rather a way to organize your code, grouping relative data in different places. A program is really just data plus procedures. So you should put data in classes, procedures in interfaces.</p> <h2 id="if-it-aint-broke-dont-fix-it">&quot;If it ain't broke, don't fix it&quot;</h2> <p>Let's take a look why OOP is broken.</p>
+</article>

@@ -1,0 +1,28 @@
+.tomorrow-night, body {
+  color: #c5c8c6;
+  background-color: #1d1f21;
+}
+
+.tomorrow-night .red {
+  color: #cc6666; /* red */
+}
+
+.tomorrow-night .orange {
+  color: #de935f; /* orange */
+}
+
+.tomorrow-night .yellow {
+  color: #f0c674; /* yellow */
+}
+
+.tomorrow-night .green {
+  color: #b5bd68; /* green */
+}
+
+.tomorrow-night .blue, h1 {
+  color: #81a2be; /* blue */
+}
+
+.tomorrow-night .purple {
+  color: #b294bb; /* purple */
+}

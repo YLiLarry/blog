@@ -1,0 +1,9 @@
+# Why in OOP You Should Stop Implementing Functions In Classes
+
+When I was in my first year undergrad OOP class, we were told that OOP is a brilliant way to model everything in life, that everything is an object, and we should write methods associative to the object in its class. I went on becoming a teaching assistant and the university and told my students the same thing. It is not until a few years later I realize I was lied to, and so were my students. Classes are not a decent way to model things for many reasons. It is wasteful in resources when child classes have to a chain of parent properties that are not always necessary. Its style of polymorphism creates complications such as the diamond problem, unsafe up and down casting, when not bringing any special benefits to the table. (Remember, there are many other languages that are living happily using other methods of polymorphism.) It gives too much freedom to code maintainers, and leads them to extending a class in unintended way and breaking the code... many experienced programmers, like you, know the frustration. 
+
+This suffering ends the moment we stop writing functions in classes, and I'm not suggesting we should all go back to stone age and write in C, but instead, most methods you wrote in classes should actually be in interfaces. Higher readability and reusability can be achieve this way. Before my explanation of this, let me first clarify what I mean by OOP in this article. By OOP I mean C++ or Java-like languages, where you have features such as class, interface, modules or equivalence. We should stop advertising OOP as a modeling tool. It is rather a way to organize your code, grouping relative data in different places. A program is really just data plus procedures. So you should put data in classes, procedures in interfaces.
+
+## "If it ain't broke, don't fix it"
+
+Let's take a look why OOP is broken.
