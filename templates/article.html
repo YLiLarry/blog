@@ -1,12 +1,49 @@
 <style>
   article {
-    font-size: larger;
     padding: 3em;
     font-family: 'Ubuntu', sans-serif;
   }
   article > p {
+    font-size: larger;
     margin-top: 1em; 
     margin-bottom: 1em; 
+    line-height: 150%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #81a2be;
+  }
+  h1 {
+    font-size: xx-large;
+  }
+  h2, h3, h4, h5, h6 {
+    font-size: x-large;
+  }
+  article>div.read-est {
+    font-size: small;
+    margin-bottom: 0.25em;
+    margin-left: 0.1em;
+    font-weight: bold;
+    opacity: 0.8;
+    text-transform: uppercase;
+  }
+  p>code {
+    background-color: rgba(0,0,0,0.1);  
+    padding: 0.2em;  
+    color: #f0dfaf;
+  }
+  div.sourceCode {
+    background-color: rgba(0,0,0,0.1);      
+    padding: 1em;    
+  }
+  code.sourceCode, pre.sourceCode  {
+    background-color: transparent;
+  }
+  code {
+    font-size: medium;
+    font-family: 'Ubuntu Mono', monospace;
+  }
+  code>span {
+    line-height: 125%;
   }
   /* article > p:last-of-type {
     margin-bottom: 0em; 

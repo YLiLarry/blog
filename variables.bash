@@ -1,1 +1,1 @@
-host="file:///G:/lab/blog/build/"
+host="file:///C:/Users/ylila/lab/blog/build"

@@ -1,2 +1,3 @@
-* <a href='file:///G:/lab/blog/build//articles/ask-employer/index.html'> Interview Questions I Would Ask My Employer</a>
-* <a href='file:///G:/lab/blog/build//articles/why-implement-functions-in-interface/index.html'> Why in OOP You Should Stop Implementing Functions In Classes</a>
+* <a href='file:///C:/Users/ylila/lab/blog/build/articles/ask-employer/index.html'>            Interview Questions I Would Ask My Employer<span class='read-est'>(272 words / 1 minutes read)<span>         </a>
+* <a href='file:///C:/Users/ylila/lab/blog/build/articles/rabbit/index.html'>            Rabbit<span class='read-est'>(6 words / 0 minutes read)<span>         </a>
+* <a href='file:///C:/Users/ylila/lab/blog/build/articles/why-implement-functions-in-interface/index.html'>            OOP Talks: Why You Should Stop Implementing Functions in Classes<span class='read-est'>(1181 words / 5 minutes read)<span>         </a>

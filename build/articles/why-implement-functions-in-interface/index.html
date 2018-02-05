@@ -16,6 +16,7 @@
   nav {
     padding-left: 5px;
     padding-right: 5px;
+    z-index: 100;
   }
   nav a {
     background-color: transparent;
@@ -45,17 +46,17 @@
 
 </script>
 <nav class="">
-  <a class="left right-spacer" href="#"><img id="profile" src="file:///G:/lab/blog/build//lib/img/profile.jpg" height="30px" width="30px"></a>
-  <a class="left right-spacer" href="file:///G:/lab/blog/build//index.html">Home</a>
-  <a class="left right-spacer" href="file:///G:/lab/blog/build//articles/index.html">Articles</a>
-  <a class="right left-spacer" href="file:///G:/lab/blog/build//articles/">Hire Me</a>
-  <a class="right left-spacer" href="file:///G:/lab/blog/build//articles/">Disagree</a>
+  <a class="left right-spacer" href="#"><img id="profile" src="file:///C:/Users/ylila/lab/blog/build/lib/img/profile.jpg" height="30px" width="30px"></a>
+  <a class="left right-spacer" href="file:///C:/Users/ylila/lab/blog/build/index.html">Home</a>
+  <a class="left right-spacer" href="file:///C:/Users/ylila/lab/blog/build/articles/index.html">Articles</a>
+  <a class="right left-spacer" href="file:///C:/Users/ylila/lab/blog/build/articles/">Hire Me</a>
+  <a class="right left-spacer" href="file:///C:/Users/ylila/lab/blog/build/articles/">Disagree</a>
 </nav> <head>
   <!-- <base href="file:///G:/lab/blog/build/"> -->
-  <link rel="stylesheet" type="text/css" href="file:///G:/lab/blog/build//lib/css/tmr.css">
+  <link rel="stylesheet" type="text/css" href="file:///C:/Users/ylila/lab/blog/build/lib/css/tmr.css">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu+Mono" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" type="text/css" href="file:///G:/lab/blog/build//lib/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="file:///C:/Users/ylila/lab/blog/build/lib/css/bootstrap.min.css"> -->
   <style>
     * {
       /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
@@ -63,9 +64,6 @@
       padding: 0;
       /* font-family: 'Ubuntu', sans-serif; */
       /* font-family: 'Ubuntu Condensed', sans-serif; */
-    }
-    code {
-      font-family: 'Ubuntu Mono', monospace;
     }
     body {
       padding-top: 50px;
@@ -80,21 +78,62 @@
     a:visited {
       color: #b294bb;
     }
-    a:hover {
+    a {
       color: #81a2be;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <style>
   article {
-    font-size: larger;
     padding: 3em;
     font-family: 'Ubuntu', sans-serif;
   }
   article > p {
+    font-size: larger;
     margin-top: 1em; 
     margin-bottom: 1em; 
+    line-height: 150%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #81a2be;
+  }
+  h1 {
+    font-size: xx-large;
+  }
+  h2, h3, h4, h5, h6 {
+    font-size: x-large;
+  }
+  article>div.read-est {
+    font-size: small;
+    margin-bottom: 0.25em;
+    margin-left: 0.1em;
+    font-weight: bold;
+    opacity: 0.8;
+    text-transform: uppercase;
+  }
+  p>code {
+    background-color: rgba(0,0,0,0.1);  
+    padding: 0.2em;  
+    color: #f0dfaf;
+  }
+  div.sourceCode {
+    background-color: rgba(0,0,0,0.1);      
+    padding: 1em;    
+  }
+  code.sourceCode, pre.sourceCode  {
+    background-color: transparent;
+  }
+  code {
+    font-size: medium;
+    font-family: 'Ubuntu Mono', monospace;
+  }
+  code>span {
+    line-height: 125%;
   }
   /* article > p:last-of-type {
     margin-bottom: 0em; 
@@ -102,5 +141,92 @@
 </style>
 
 <article>
-  <h1 id="why-in-oop-you-should-stop-implementing-functions-in-classes">Why in OOP You Should Stop Implementing Functions In Classes</h1> <p>When I was in my first year undergrad OOP class, we were told that OOP is a brilliant way to model everything in life, that everything is an object, and we should write methods associative to the object in its class. I went on becoming a teaching assistant and the university and told my students the same thing. It is not until a few years later I realize I was lied to, and so were my students. Classes are not a decent way to model things for many reasons. It is wasteful in resources when child classes have to a chain of parent properties that are not always necessary. Its style of polymorphism creates complications such as the diamond problem, unsafe up and down casting, when not bringing any special benefits to the table. (Remember, there are many other languages that are living happily using other methods of polymorphism.) It gives too much freedom to code maintainers, and leads them to extending a class in unintended way and breaking the code... many experienced programmers, like you, know the frustration.</p> <p>This suffering ends the moment we stop writing functions in classes, and I'm not suggesting we should all go back to stone age and write in C, but instead, most methods you wrote in classes should actually be in interfaces. Higher readability and reusability can be achieve this way. Before my explanation of this, let me first clarify what I mean by OOP in this article. By OOP I mean C++ or Java-like languages, where you have features such as class, interface, modules or equivalence. We should stop advertising OOP as a modeling tool. It is rather a way to organize your code, grouping relative data in different places. A program is really just data plus procedures. So you should put data in classes, procedures in interfaces.</p> <h2 id="if-it-aint-broke-dont-fix-it">&quot;If it ain't broke, don't fix it&quot;</h2> <p>Let's take a look why OOP is broken.</p>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #cccccc; background-color: #303030; }
+code > span.kw { color: #f0dfaf; } /* Keyword */
+code > span.dt { color: #dfdfbf; } /* DataType */
+code > span.dv { color: #dcdccc; } /* DecVal */
+code > span.bn { color: #dca3a3; } /* BaseN */
+code > span.fl { color: #c0bed1; } /* Float */
+code > span.ch { color: #dca3a3; } /* Char */
+code > span.st { color: #cc9393; } /* String */
+code > span.co { color: #7f9f7f; } /* Comment */
+code > span.ot { color: #efef8f; } /* Other */
+code > span.al { color: #ffcfaf; } /* Alert */
+code > span.fu { color: #efef8f; } /* Function */
+code > span.er { color: #c3bf9f; } /* Error */
+code > span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+code > span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code > span.sc { color: #dca3a3; } /* SpecialChar */
+code > span.vs { color: #cc9393; } /* VerbatimString */
+code > span.ss { color: #cc9393; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #f0dfaf; } /* ControlFlow */
+code > span.op { color: #f0efd0; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #7f9f7f; } /* Documentation */
+code > span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+  </style>
+</head>
+<body>
+<div class="read-est">
+1181 words / 5 minutes read
+</div>
+<h1>
+OOP Talks: Why You Should Stop Implementing Functions in Classes
+</h1>
+<p>In this article we will discuss some problems of class-based OOP and why you should move to interface-based OOP.</p>
+<p>When I was in my first year undergrad OOP class, we were told that OOP is a brilliant way to model everything in life, that everything is an object, and we should write methods associative to the object in its class. I went on becoming a teaching assistant and the university and told my students the same thing. It is not until a few years later I realize I was lied to, and so were my students. Classes are not a decent way to model things for many reasons. It is wasteful in resources when child classes have to a chain of parent properties that are not always necessary. Its style of polymorphism creates complications such as the diamond problem, unsafe up and down casting, when not bringing any special benefits to the table. (Remember, there are many other languages that are living happily using other methods of polymorphism.) It gives too much freedom to code maintainers, and leads them to extending a class in unintended way and breaking the code... many experienced programmers, like you, know the frustration.</p>
+<p>This suffering ends the moment we stop writing functions in classes, and I'm not suggesting we should all go back to stone age and write in C, but instead, most methods you wrote in classes should actually be in interfaces (or equivalence in any language). Higher readability and reusability can be achieved this way. Before my explanation of this, let me first clarify what I mean by OOP in this article. By OOP I mean C++ or Java-like languages, where you have features such as class, interface (or abstract class), virtual methods (or anyway to override base class methods). We should stop advertising OOP as a modeling tool. It is rather a way to organize your code, grouping relative data in different places. A program is really just data plus procedures. So you should put data in classes, procedures in interfaces.</p>
+<h2 id="if-it-aint-broke-dont-fix-it">&quot;If it ain't broke, don't fix it&quot;</h2>
+<p>We all once lived happily with one technology until something better is developed. There is nothing wrong with Nokia, but Apple out-classed Nokia so Nokia went &quot;broke&quot;. Similarly, our goal is not just make a programming language work, but work better. So let us not be narrow-minded OOP worshipers and take a look at some realy problematic designs choices of OOP.</p>
+<h2 id="dynamic-polymorphism-is-broken">Dynamic Polymorphism Is Broken</h2>
+<p>Recall that in OOP dynamic polymorphism means the program automatically figures out the type of pointers during runtime. For example, if a function takes a base class as a parameter, and you pass a child class into the function, then compile generates code so that the meaning of <code>this</code> is figured out during runtime. This unfortunately results in counter-intuitive bahaviors in some cases, leaving bugs in your code that are exremely hard to spot.</p>
+<p>Here's a pesduo-code example: suppose you have a base class <code>A</code> and a child <code>A_child</code>:</p>
+<div class="sourceCode"><pre class="sourceCode c++"><code class="sourceCode cpp"><span class="kw">class</span> A {};                 <span class="co">// parent</span>
+<span class="kw">class</span> A_child: <span class="kw">public</span> A {}; <span class="co">// child</span></code></pre></div>
+<p>And you want to overload a method named <code>f</code> in some other class <code>B</code>, where the first <code>f</code> takes <code>A</code>, and the other <code>f</code> takes <code>A_child</code>.</p>
+<div class="sourceCode"><pre class="sourceCode c++"><code class="sourceCode cpp"><span class="kw">class</span> B {
+    <span class="kw">public</span>:
+    <span class="dt">void</span> f(A* a) {
+      cout &lt;&lt; <span class="st">&quot;called f(A)&quot;</span>;
+    }     
+    <span class="dt">void</span> f(A_child* a) {
+      cout &lt;&lt; <span class="st">&quot;called f(A_child)&quot;</span>;
+    } 
+};</code></pre></div>
+<p>Say you have a pointer <code>ptr</code> of type <code>A</code>, which is actually pointing to <code>A_child</code>. This is a classical situation where you expect dynamic dispath to happen. Now think what happens if you call <code>f(ptr)</code> before proceeding.</p>
+<div class="sourceCode"><pre class="sourceCode c++"><code class="sourceCode cpp"><span class="dt">int</span> main() {
+    A* ptr = <span class="kw">new</span> A_child();
+    (<span class="kw">new</span> B())-&gt;f(ptr); 
+}</code></pre></div>
+<p>Do you believe if I tell you the code prints out <code>&quot;called f(A)&quot;</code>?</p>
+<p>The first time I saw this in class I jumped from my seat. Wow! What the actual fuck? This is like a trap in a programming code waiting for its prey to step into. Even after knowing the correct answer it is still hard to comprehend why this is the case. So what is to blame here? The reason is we have been tricked into thinking this is a case of dynamic dispath, when it is really about resolving overloaded methods. The resolution of overloaded methods happens at compile time. So the compiler looks at the <code>A* ptr = new A_child()</code> and goes, &quot;oh! <code>ptr</code> is an <code>A*</code> type, so I'm going to call the <code>f(A)</code> version of <code>class B</code>&quot;. The compiler makes a counter-intuitive decision to the programmer, and there's really no way to fix it unless we can get rid of method overloading or dynmaic dispath all together, because the compiler's choice is by the design of the language.</p>
+<p>Just imagine you're maintaining a large amount of code that contains this bug, and after wasting hours on debugging you finally figured out this misconcept. Then it's time to ask, &quot;how do I fix it?&quot; Then you bring out your favorite OOP design pattern book and read that you should apply &quot;double dispath&quot; pattern here. You scratch your head and ask, why does it have to be so perplexed? Dear! This is what OOP programmers do! We take a very simple take, make it difficult so it makes us feel smarter. &quot;But... A true OOP programmer would know this kind of stuff and not make such mistake!&quot; You might argue, and I totally agree with that. However, why would I waste my time learning, dodging and debuging these language shortcomings when I can be solving more important problems or writting more apps? Why would I have to work around a programming language when the programming language should serve me instead? A good programming language should be intuitive and expressive, and OOP fails to be so.</p>
+<h2 id="dynamic-polymorphism-is-out-classed-by-interface">Dynamic Polymorphism Is Out-classed by Interface</h2>
+<h2 id="children-are-out-of-control">Children are out of control</h2>
+<p>Got a parenting problem? One thing that OOP promises, abstraction, is fragile since a base class imposes no restriction on what children must override, and what rule they must follow. It is up to the children to decide what to do. This freedom in fact does more harm than good. Just ask yourself how many times your project started with a clean base code, then as the development progresses the code slowly grows and becomes more complex, and with new programmers join the team, experienced programmers who started the base code leaves the team, the project becomes harder and harder to manage, and every maintenance seems to fix something but breaks something else? This happens because while in OOP decision of implementation can be deferred to children but there is no way for a base class to impose a rule on how a child should behave or follow some properties. This burden of making sure children's implementation follows the original design is given to a programmer, who may be inexperienced with the parent classes and may end up overriding a method in unintended ways.</p>
+<p>Here's an example of a base class</p>
+</body>
+</html>
 </article>
